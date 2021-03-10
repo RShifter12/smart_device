@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 1.6rem;
   min-width: 320px;
@@ -20,28 +20,26 @@ body {
 }
 
 .content {
-  background-image: url(.././img/mainbike1x.jpg);
+  background-image: url(".././img/mainbike1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 103vh;
-
-@media (max-width: $tablet-width) {
-  background-size: 100% 34rem;
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url(.././img/mainbike2x.jpg);
-  }
-
-}
-
-.page {
+  background-size: 100% 88vh;
   margin: 0 auto;
-//  max-width: 1300px;
   display: flex;
   flex-direction: column;
   height: 100%;
   flex: 1 0 auto;
 
+  @media (max-width: $tablet-width) {
+    background-size: 100% 34rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-size: 100% 39rem;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/mainbike2x.jpg");
+  }
 }
 
 .footer {
@@ -52,36 +50,37 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-/* open-sans-300 - latin_cyrillic */
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  src: local(''),
-          url('../fonts/open-sans-v18-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-          url('../fonts/open-sans-v18-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+    url("../fonts/open-sans-v18-latin_cyrillic-300.woff2") format("woff2"),
+    url("../fonts/open-sans-v18-latin_cyrillic-300.woff") format("woff");
 }
-/* open-sans-regular - latin_cyrillic */
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-        url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+    url("../fonts/open-sans-v18-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/open-sans-v18-latin_cyrillic-regular.woff") format("woff");
 }
-/* open-sans-600 - latin_cyrillic */
+
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
-  src: local(''),
-        url('../fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/open-sans-v18-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local(""),
+    url("../fonts/open-sans-v18-latin_cyrillic-600.woff2") format("woff2"),
+    url("../fonts/open-sans-v18-latin_cyrillic-600.woff") format("woff");
 }
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -91,6 +90,5 @@ a {
   width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; /* added line */
 }

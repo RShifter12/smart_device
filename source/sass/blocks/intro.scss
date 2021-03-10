@@ -1,67 +1,59 @@
 .intro {
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 101vh;
-  max-width: 88.5rem;
+  height: 86vh;
+  max-width: 88rem;
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-  flex-direction: column;
-    height: 85vh;
+    flex-direction: column;
+    height: 72vh;
     width: 100%;
   }
 
   @media (max-width: $mobile-width) {
-  height: 91vh;
-
+    height: 77.5vh;
   }
 }
 
 .intro__description {
-//  outline: 5px solid red;
   max-width: 35rem;
   display: flex;
   flex-direction: column;
-//  gap: 5rem;
   justify-content: space-between;
   height: 30rem;
 
   @media (max-width: $tablet-width) {
-  max-width: 60%;
-
+    max-width: 60%;
   }
 
   @media (max-width: $mobile-width) {
-  max-width: 90%;
-
+    max-width: 90%;
   }
-
 }
 
 .intro__logo {
   width: 7rem;
   height: 2rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     height: 3rem;
   }
-
 }
 
 .intro__logo--tablet {
   @media (max-width: $tablet-width) {
     position: absolute;
     left: 21px;
-
   }
 }
 
 .intro__form {
   display: flex;
   flex-direction: column;
-  max-width: 33rem;
-  gap: 1rem;
+  max-width: 32.5rem;
+  gap: 2rem;
   height: 29rem;
 
   @media (max-width: $tablet-width) {
@@ -75,16 +67,14 @@ display: flex;
   }
 }
 
-
-
-.intro__title {
+.intro__description h1 {
   color: $white;
   font-weight: 600;
   font-size: 46px;
   line-height: 64px;
-  letter-spacing: -0.005em;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (max-width: $tablet-width) {
     max-width: 100%;
@@ -92,16 +82,14 @@ display: flex;
     font-size: 30px;
     line-height: 42px;
     padding-top: 11.5rem;
-
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 10rem;
   }
-
 }
 
-.intro__text {
+.intro__description p {
   color: $white;
   font-weight: 300;
   font-size: 20px;
@@ -117,16 +105,15 @@ display: flex;
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 6rem;
-
   }
 
   @media (max-width: $mobile-width) {
-    margin-left: 0rem;
-    margin-bottom: 0rem;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
-.intro__form-title {
+.intro__form h2 {
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;
@@ -136,43 +123,39 @@ display: flex;
   margin: 0;
 
   @media (max-width: $tablet-width) {
-
-  margin-bottom: 1rem;
-  font-size: 18px;
-  color: black;
-
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: black;
   }
+
   @media (max-width: $mobile-width) {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
-
 }
 
-.input {
+.intro__form input {
   height: 5rem;
   padding-left: 3rem;
   background: $white;
-  border: 1px solid #C9CCD4;
+  border: 1px solid #c9ccd4;
   box-sizing: border-box;
   border-radius: 6px;
 
   @media (max-width: $tablet-width) {
     padding-left: 2rem;
     border-radius: 4px;
-
-
   }
 
   &::placeholder {
-    font-family: "Open Sans", Arial, sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 24px;
-    color: #1C1C1C;
+    color: #1c1c1c;
     opacity: 0.5;
   }
 }
 
-.btn {
+.intro__form button {
   height: 5rem;
   background-color: $primary;
   border: none;
@@ -182,7 +165,6 @@ display: flex;
   line-height: 21px;
   font-family: inherit;
   border-radius: 6px;
-  margin-top: 1rem;
 
   &:hover,
   &:focus {
@@ -192,5 +174,4 @@ display: flex;
   &:active {
     background-color: lighten($primary, 15%);
   }
-
 }

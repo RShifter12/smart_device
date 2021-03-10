@@ -1,65 +1,72 @@
 .video {
   text-align: center;
   background-color: $bg-black;
-  padding-top: 10.5rem;
+  padding-top: 12.5rem;
   height: 71rem;
   position: relative;
-  margin-bottom: 23rem;
+  margin-bottom: 22rem;
 
   @media (max-width: $tablet-width) {
     height: 413px;
-    padding-top: 5.5rem;
-    margin-bottom: 14rem;
+    padding-top: 7rem;
+    margin-bottom: 13rem;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 8.5rem;
     height: 38.5rem;
-    margin-bottom: 11rem;
+    margin-bottom: 10.5rem;
   }
 }
 
-.video__title {
+.video h2 {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
   letter-spacing: -0.005em;
   color: $white;
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding-right: 1rem;
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 2rem;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 28rem;
+    max-width: 30rem;
     margin: 0 auto;
     margin-bottom: 2rem;
-
+    padding-right: 1rem;
   }
 }
 
-.video__text {
+.video p {
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
   max-width: 35rem;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  margin-bottom: 5.5rem;
   letter-spacing: -0.005em;
-  color: #FFFFFF;
+  color: $white;
   opacity: 0.7;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
 
   @media (max-width: $tablet-width) {
     max-width: 45rem;
     margin-bottom: 4rem;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 5.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -88,7 +95,7 @@
 }
 
 
-.video__btn {
+.video__wrapper button {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -109,26 +116,25 @@
     background-color: lighten($primary, 15%);
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     width: 90.36px;
     height: 90.36px;
     top: 34%;
     left: 41%;
-
   }
 
   @media (max-width: $mobile-width) {
     width: 65px;
     height: 65px;
-    top: 32%;
+    top: 29%;
     left: 39%;
   }
 
   &::after {
     content: "";
     position: absolute;
-    width: 0rem;
-    height: 0rem;
+    width: 0;
+    height: 0;
     left: 45%;
     top: 39%;
     border-top: 8px solid transparent;
@@ -149,10 +155,4 @@
       top: 38%;
     }
   }
-}
-
-.video__play {
-  width: 13px;
-  height: 13px;
-  fill: black;
 }

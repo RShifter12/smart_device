@@ -12,19 +12,15 @@
   @media (max-width: $tablet-width) {
     width: 698px;
     height: 545px;
-    margin-bottom: 12rem;
+    margin-bottom: 13rem;
   }
-
-
 
   @media (max-width: $mobile-width) {
     width: 320px;
     height: 250px;
     margin-bottom: 19rem;
   }
-  }
-
-
+}
 
 .map img {
   width: 100%;
@@ -32,13 +28,14 @@
   object-fit: cover;
   object-position: 0 0;
 }
-.map__title {
+
+.map h2 {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 3rem;
   letter-spacing: -0.005em;
-  color: #1F1F1F;
+  color: #1f1f1f;
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
@@ -52,7 +49,7 @@
   }
 }
 
-.map__text {
+.map p {
   max-width: 55.5rem;
   margin: 0 auto;
   font-size: 17px;
@@ -68,7 +65,6 @@
   @media (max-width: $mobile-width) {
     max-width: 27rem;
   }
-
 }
 
 .contacts {
@@ -105,12 +101,9 @@
   fill: none;
 }
 
-.contacts__text {
+.contacts__wrapper a {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
-
-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
-
-

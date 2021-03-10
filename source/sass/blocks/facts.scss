@@ -1,21 +1,20 @@
 .facts {
-  padding-top: 9rem;
+  padding-top: 8rem;
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    padding-top: 4rem;
+    padding-top: 3rem;
     max-width: 56rem;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 5.5rem;
+    padding-top: 5rem;
     padding-left: 1rem;
     padding-right: 1rem;
-
   }
 }
 
-.facts__title {
+.facts h2 {
   text-align: center;
   font-weight: 600;
   font-size: 30px;
@@ -23,14 +22,12 @@
   letter-spacing: -0.005em;
 
   @media (max-width: $tablet-width) {
-
-  font-size: 24px;
-  line-height: 41px;
-
+    font-size: 24px;
+    line-height: 41px;
   }
 
   @media (max-width: $mobile-width) {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -54,14 +51,15 @@
   }
 }
 
-.fact__number {
+.fact h3 {
   text-align: center;
   color: $primary;
   font-weight: 600;
   font-size: 28px;
   line-height: 38px;
-  text-align: center;
   letter-spacing: -1.27273px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 
   @media (max-width: $tablet-width) {
     margin-top: 1.5rem;
@@ -71,16 +69,16 @@
     margin-bottom: 1rem;
     margin-top: 0;
   }
-
 }
 
-.fact__text {
+.fact p {
   text-align: center;
   font-size: 22px;
-  line-height: 29px;
+  line-height: 32px;
   letter-spacing: -0.5px;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-top: 0;
 
 
   @media (max-width: $mobile-width) {
@@ -91,5 +89,4 @@
     margin-top: 1rem;
     margin-bottom: 0;
   }
-
 }
