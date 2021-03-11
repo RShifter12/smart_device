@@ -141,6 +141,12 @@
   box-sizing: border-box;
   border-radius: 6px;
 
+  &:hover,
+  &:focus {
+    background: darken($white, 25%);
+    outline: none;
+  }
+
   @media (max-width: $tablet-width) {
     padding-left: 2rem;
     border-radius: 4px;
@@ -165,6 +171,7 @@
   line-height: 21px;
   font-family: inherit;
   border-radius: 6px;
+  cursor: pointer;
 
   &:hover,
   &:focus {
