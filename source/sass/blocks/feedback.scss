@@ -1,0 +1,202 @@
+.feedback {
+  background-color: $primary;
+  height: 67rem;
+  position: relative;
+
+
+}
+
+.feedback__wrapper {
+  display: grid;
+//  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: minmax(300px, 685px) minmax(300px, 570px);
+  grid-template-rows: 1fr;
+  max-width: 155rem;
+  margin: 0 auto;
+  grid-gap: 11rem;
+  outline: 5px solid red;
+
+  z-index: 1;
+
+
+
+  &::after {
+    content: "";
+    background-image: url(".././img/triangles.svg");
+    position: absolute;
+    background-size: contain;
+    width: 51rem;
+    height: 67rem;
+    right: -16rem;
+    top: 3rem;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+  }
+}
+
+.feedback__form {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+
+position: relative;
+  margin-top: 5rem;
+}
+
+.feedback__image {
+  margin-top: -6.5rem;
+}
+
+.feedback__image img {
+  outline: 5px solid red;
+  width: 100%;
+//  object-fit: cover;
+}
+
+.feedback__text {
+  color: white;
+  margin-top: 6rem;
+}
+
+.feedback__text h2 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 0;
+}
+
+.feedback__text p {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "PT Mono";
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+}
+
+.feedback__text input:not(input[type="checkbox"]) {
+  height: 5rem;
+  width: 27rem;
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  margin-bottom: -5rem;
+  color: white;
+  font-family: inherit;
+  padding-left: 2rem;
+  font-size: 16px;
+
+    &:hover,
+  &:focus {
+    background-color: darken($primary, 5%);
+
+  }
+
+
+
+
+  &::placeholder {
+    font-size: 16px;
+
+    line-height: 22px;
+    color: white;
+    opacity: 1;
+    font-family: "PT Mono";
+  }
+}
+
+.feedback__text textarea {
+  display: inline-block;
+  height: 10rem;
+  width: 100%;
+  resize: none;
+  background-color: rgba(255,255,255,0.1);
+
+  outline: 5px solid red;
+  padding-left: 2rem;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+    margin-top: 5rem;
+
+
+    &:hover,
+    &:focus {
+    background-color: darken($primary, 5%);
+
+  }
+
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    opacity: 1;
+    font-family: "PT Mono";
+  }
+}
+
+.feedback__text button {
+  height: 4.5rem;
+  width: 27rem;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-family: inherit;
+  border: 1px solid white;
+
+  border-radius: 5px;
+
+   &:hover,
+  &:focus {
+    background-color: $white;
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+.feedback__text input[type="checkbox"] {
+  position: absolute;
+  appearance: none;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  color: white;
+
+  opacity: 0.8;
+
+
+}
+
+.feedback__text input[type="checkbox"]:checked + span {
+  background-image: url(".././img/checkon.svg");
+}
+
+.feedback__text input[type="checkbox"]:focus + span {
+  background-image: url(".././img/checkoff.svg");
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.7);
+}
+
+.feedback__text input[type="checkbox"]:focus:checked + span {
+  background-image: url(".././img/checkon.svg");
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.7);
+}
+
+.feedback__text span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url(".././img/checkoff.svg");
+  margin-left: -2rem;
+  margin-top: 1.5rem;
+
+}
+
+.feedback__text label {
+  padding-left: 2rem;
+  font-family: "PT Mono";
+}
+
+

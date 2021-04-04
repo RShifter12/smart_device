@@ -1,0 +1,114 @@
+.services {
+  background-color: $bg-black;
+  color: white;
+
+  padding: 9rem;
+  padding-bottom: 13rem;
+}
+
+.services h2 {
+  font-size: 36px;
+  line-height: 51px;
+  max-width: 115rem;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  font-weight: normal;
+}
+
+.services__wrapper {
+  padding-left: 2rem;
+  max-width: 119rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+
+}
+
+.services__wrapper a {
+
+   &:hover,
+    &:focus {
+      box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.7);
+
+  }
+
+  &:active {
+    background-color: darken($primary, 20%);
+  }
+}
+
+.services__item {
+  position: relative;
+  min-height: 62rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+  }
+}
+
+.services__item button {
+  width: 6.3rem;
+  height: 6.3rem;
+  background-color: $primary;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+}
+
+
+
+.services__item1::before {
+  content: "";
+  background-image: url(.././img/bg1jpg.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.services__item2::before {
+  content: "";
+  background-image: url(.././img/bg2.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+
+
+}
+
+.services__item3::before {
+  content: "";
+  background-image: url(.././img/bg3.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.services__item h3 {
+  font-family: "Roboto Condensed";
+  max-width: 28rem;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 5rem;
+  margin: 0 auto;
+  color: white;
+
+}
+
+

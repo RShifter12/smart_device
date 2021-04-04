@@ -1,0 +1,55 @@
+.about {
+  display: grid;
+  grid-template-columns: 17.5% 80%;
+  max-width: 122rem;
+  margin: 0 auto;
+  margin-top: 8rem;
+  height: 44.5rem;
+}
+
+.about__image {
+  margin-top: 3rem;
+}
+
+.about__text {
+  color: $black;
+}
+
+.about__text h2 {
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 2rem;
+}
+
+.about__text p {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "PT Mono";
+}
+
+
+
+.about__text a {
+  display: inline-block;
+  margin-top: 2.5rem;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: 1.2rem 4.7rem;
+  text-transform: uppercase;
+  font-family: inherit;
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: white;
+  }
+
+  &:active {
+    background-color: darken($primary, 20%);
+  }
+
+
+
+}
+

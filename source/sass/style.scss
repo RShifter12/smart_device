@@ -2,8 +2,9 @@
 @import "blocks/nav.scss";
 @import "blocks/intro.scss";
 @import "blocks/facts.scss";
-@import "blocks/type.scss";
-@import "blocks/video.scss";
+@import "blocks/about.scss";
+@import "blocks/services.scss";
+@import "blocks/feedback.scss";
 @import "blocks/footer.scss";
 
 html {
@@ -11,36 +12,45 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-size: 1.6rem;
   min-width: 320px;
   margin: 0 auto;
   max-width: 1920px;
+
+
+}
+
+.main__image {
+  background-image: url(".././img/intro.png");
+  background-repeat: no-repeat;
+
+  height: 880px;
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  z-index: -1;
+  background-color: #1B2D37;
+  background-position: center center;
+
 }
 
 .content {
-  background-image: url(".././img/mainbike1x.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 88vh;
-  margin: 0 auto;
+
+
   display: flex;
   flex-direction: column;
   height: 100%;
+
   flex: 1 0 auto;
 
-  @media (max-width: $tablet-width) {
-    background-size: 100% 34rem;
-  }
 
-  @media (max-width: $mobile-width) {
-    background-size: 100% 39rem;
-  }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url(".././img/mainbike2x.jpg");
-  }
+
 }
+
+
 
 .footer {
   flex: 0 0 auto;
@@ -51,33 +61,47 @@ a {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+}
+
+/* roboto-condensed-300 - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 300;
-  src: local(""),
-    url("../fonts/open-sans-v18-latin_cyrillic-300.woff2") format("woff2"),
-    url("../fonts/open-sans-v18-latin_cyrillic-300.woff") format("woff");
+  src: local(''),
+       url('../fonts/roboto-condensed-v19-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-condensed-v19-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* roboto-condensed-regular - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 400;
-  src: local(""),
-    url("../fonts/open-sans-v18-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../fonts/open-sans-v18-latin_cyrillic-regular.woff") format("woff");
+  src: local(''),
+       url('../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* roboto-condensed-700 - latin_cyrillic */
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Roboto Condensed';
   font-style: normal;
-  font-weight: 600;
-  src: local(""),
-    url("../fonts/open-sans-v18-latin_cyrillic-600.woff2") format("woff2"),
-    url("../fonts/open-sans-v18-latin_cyrillic-600.woff") format("woff");
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/roboto-condensed-v19-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/roboto-condensed-v19-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* pt-mono-regular - latin_cyrillic */
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/pt-mono-v8-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/pt-mono-v8-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 *,
 *::before,
 *::after {

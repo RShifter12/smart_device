@@ -1,92 +1,57 @@
 .facts {
-  padding-top: 8rem;
+  max-width: 116rem;
   margin: 0 auto;
-
-  @media (max-width: $tablet-width) {
-    padding-top: 3rem;
-    max-width: 56rem;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-top: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-.facts h2 {
-  text-align: center;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  letter-spacing: -0.005em;
-
-  @media (max-width: $tablet-width) {
-    font-size: 24px;
-    line-height: 41px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 3rem;
-  }
-}
-
-.facts__wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 3rem;
-  max-width: 1180px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 5rem;
+  grid-gap: 3.5rem;
 
-
-  @media (max-width: $tablet-width) {
-    grid-column-gap: 3rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  @media (max-width: $mobile-width) {
-    grid-template-columns: 1fr;
-    grid-row-gap: 4.5rem;
-  }
 }
 
-.fact h3 {
-  text-align: center;
+.facts__item {
+  border-left: 3px solid $primary;
+  padding-left: 4.7rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    cursor: pointer;
+  }
+
+}
+
+.facts__item svg {
+  fill: $primary;
+}
+
+.facts__item:hover svg {
+  fill: white;
+}
+
+.facts__item:hover h2,
+.facts__item:focus h2 {
+  color: white;
+}
+
+.facts__item:hover p,
+.facts__item:focus p {
+  color: white;
+}
+
+.facts__item h2 {
+  font-size: 24px;
+  line-height: 34px;
   color: $primary;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 38px;
-  letter-spacing: -1.27273px;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 
-  @media (max-width: $tablet-width) {
-    margin-top: 1.5rem;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 1rem;
-    margin-top: 0;
-  }
 }
 
-.fact p {
-  text-align: center;
-  font-size: 22px;
-  line-height: 32px;
-  letter-spacing: -0.5px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 0;
-
-
-  @media (max-width: $mobile-width) {
-    font-size: 18px;
-    line-height: 34px;
-    text-align: center;
-    letter-spacing: -0.5px;
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
+.facts__item p {
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  font-family: "PT Mono";
 }
