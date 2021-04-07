@@ -1,33 +1,100 @@
 .about {
   display: grid;
-  grid-template-columns: 17.5% 80%;
+  grid-template-columns: 17% 80%;
   max-width: 122rem;
   margin: 0 auto;
   margin-top: 8rem;
   height: 44.5rem;
+
+  @media(max-width: $tablet-width) {
+    max-width: 77rem;
+    grid-template-columns: 27% 73%;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    height: 100%;
+    max-width: 30rem;
+    margin-bottom: 7rem;
+  }
 }
 
 .about__image {
-  margin-top: 3rem;
+  margin-top: 4rem;
+
+  @media(max-width: $tablet-width) {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.about__image img {
+
+  @media(max-width: $tablet-width) {
+    width: 251px;
+    height: 361px;
+  }
 }
 
 .about__text {
   color: $black;
+  overflow: hidden;
+
+  @media(max-width: $tablet-width) {
+    padding-right: 2rem;
+  }
+
+  @media(max-width: $tablet-width) {
+    padding-right: 0;
+  }
 }
 
 .about__text h2 {
   font-size: 36px;
   line-height: 51px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+
+  @media(max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media(max-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
 }
 
 .about__text p {
   font-size: 16px;
   line-height: 22px;
   font-family: "PT Mono";
+
+  @media(max-width: $tablet-width) {
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    margin-bottom: 3rem;
+  }
 }
 
+.about__text span {
 
+  @media(max-width: $tablet-width) {
+    display: none;
+  }
+}
 
 .about__text a {
   display: inline-block;
@@ -37,7 +104,14 @@
   border-radius: 5px;
   padding: 1.2rem 4.7rem;
   text-transform: uppercase;
-  font-family: inherit;
+  font-family: "Roboto Condendsed";
+
+  @media(max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+  }
 
   &:hover,
   &:focus {
@@ -48,8 +122,4 @@
   &:active {
     background-color: darken($primary, 20%);
   }
-
-
-
 }
-

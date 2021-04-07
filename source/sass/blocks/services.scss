@@ -1,36 +1,73 @@
 .services {
   background-color: $bg-black;
   color: white;
-
   padding: 9rem;
   padding-bottom: 13rem;
+
+  @media(max-width: $tablet-width) {
+    padding: 0;
+    padding-bottom: 8rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    padding: 0;
+    padding-bottom: 7rem;
+  }
 }
 
 .services h2 {
   font-size: 36px;
   line-height: 51px;
-  max-width: 115rem;
+  max-width: 117rem;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  margin-bottom: 5.5rem;
   font-weight: normal;
+
+  @media(max-width: $tablet-width) {
+    padding-left: 2.5rem;
+    padding-top: 6rem;
+    font-size: 32px;
+    line-height: 45px;
+    padding-right: 12rem;
+    padding-top: 4rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+    padding-right: 0;
+    padding-top: 5rem;
+    margin-bottom: 4.5rem;
+  }
 }
 
 .services__wrapper {
-  padding-left: 2rem;
-  max-width: 119rem;
+
+  max-width: 117rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
 
+  @media(max-width: $tablet-width) {
+    max-width: 72rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 4.5rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    max-width: 90%;
+    padding: 0;
+    grid-gap: 3rem;
+  }
 }
 
 .services__wrapper a {
 
-   &:hover,
-    &:focus {
-      box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.7);
-
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.7);
   }
 
   &:active {
@@ -42,16 +79,21 @@
   position: relative;
   min-height: 62rem;
 
+  @media(max-width: $tablet-width) {
+    min-height: 256px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   &::after {
     content: "";
     position: absolute;
     bottom: 0;
     right: 0;
-
   }
 }
 
-.services__item button {
+.services__item-btn {
   width: 6.3rem;
   height: 6.3rem;
   background-color: $primary;
@@ -63,7 +105,11 @@
 
 }
 
-
+.services__item-btn svg {
+  position: absolute;
+  right: 45%;
+  top: 45%;
+}
 
 .services__item1::before {
   content: "";
@@ -74,6 +120,13 @@
   bottom: 0;
   right: 0;
   position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 100% 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/bg1jpg2x.jpg");
+  }
 }
 
 .services__item2::before {
@@ -85,8 +138,13 @@
   bottom: 0;
   right: 0;
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-
+  @media (min-resolution: 2dppx) {
+    background-image: url(".././img/bg22x.jpg");
+    background-size: cover;
+  }
 }
 
 .services__item3::before {
@@ -98,6 +156,21 @@
   bottom: 0;
   right: 0;
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media (min-resolution: 2dppx) {
+    content: "";
+    background-image: url(".././img/bg32x.jpg");
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 }
 
 .services__item h3 {
@@ -109,6 +182,13 @@
   margin: 0 auto;
   color: white;
 
+  @media(max-width: $tablet-width) {
+    margin-left: 4rem;
+    padding-top: 4rem;
+  }
+
+  @media(max-width: $mobile-width) {
+    margin-left: 3.5rem;
+    padding-top: 2rem;
+  }
 }
-
-

@@ -2,18 +2,36 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 45% 55%;
-  max-width: 142rem;
+  max-width: 141rem;
   padding-top: 4rem;
-  padding-left: 1rem;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 80% 20%;
+    padding-top: 2.5rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 2.5rem;
+    grid-template-columns: 64% 36%;
+  }
 }
 
 .nav__content {
   display: grid;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 1.5rem;
+  }
 }
 
 .nav__content--left {
   grid-template-columns: min-content 1fr;
   grid-column-gap: 1.5rem;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 2rem;
+  }
+
 }
 
 .nav__content--left a {
@@ -25,14 +43,16 @@
   outline: 5px solid red;
 }
 
-
-
-
 .nav__content p {
   margin: 0;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
-.nav__content a {
+.nav__content-mail a,
+.nav__content-phone a {
   color: white;
   margin-left: 1rem;
 
@@ -46,6 +66,17 @@
   }
 }
 
+.nav__content-mail p,
+.nav__content-phone p {
+  font-family: "PT Mono";
+  display: inline-block;
+  margin-left: 1.2rem;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .nav__content--right {
   display: grid;
   grid-template-columns: 1fr 1fr min-content;
@@ -53,19 +84,27 @@
   justify-items: end;
   grid-gap: 5rem;
   margin-top: -1rem;
-  outline: 5px solid red;
 
+  @media (max-width: $tablet-width) {
+    grid-gap: 2rem;
+  }
 }
 
+.nav__content--left svg {
+  width: 52px;
+  height: 52px;
 
-
-.mail__container {
-  margin-right: 2rem;
+  @media (max-width: $mobile-width) {
+    width: 38px;
+    height: 38px;
+  }
 }
 
-.phone__container {
-  margin-right: 3.8rem;
+.nav__content--right svg {
+  width: 22px;
+  height: 22px;
 }
+
 
 .nav__content--right button {
   height: 45px;
@@ -76,14 +115,18 @@
   color: white;
   text-transform: uppercase;
 
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
   &:hover,
   &:focus {
     background-color: $primary;
   }
-    &:active {
+
+  &:active {
     background-color: darken($primary, 15%);
   }
-
 }
 
 .nav__content-text {
@@ -95,15 +138,15 @@
   font-size: 25px;
   line-height: 29px;
   color: white;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
-.nav__content p {
+.nav__content--left p {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
   color: #788891;
-
 }
-
-
-
