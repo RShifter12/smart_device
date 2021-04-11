@@ -4,12 +4,12 @@
   padding: 9rem;
   padding-bottom: 13rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding: 0;
     padding-bottom: 8rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     padding: 0;
     padding-bottom: 7rem;
   }
@@ -23,16 +23,15 @@
   margin-bottom: 5.5rem;
   font-weight: normal;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-left: 2.5rem;
-    padding-top: 6rem;
     font-size: 32px;
     line-height: 45px;
     padding-right: 12rem;
     padding-top: 4rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     font-size: 28px;
     line-height: 39px;
     padding-right: 0;
@@ -49,14 +48,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     max-width: 72rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 4.5rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     max-width: 90%;
     padding: 0;
     grid-gap: 3rem;
@@ -64,10 +63,10 @@
 }
 
 .services__wrapper a {
-
   &:hover,
   &:focus {
-    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,255,.7);
+
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 255, 0.7);
   }
 
   &:active {
@@ -79,7 +78,7 @@
   position: relative;
   min-height: 62rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     min-height: 256px;
     width: 100%;
     margin: 0 auto;
@@ -102,7 +101,6 @@
   position: absolute;
   right: 0;
   bottom: 0;
-
 }
 
 .services__item-btn svg {
@@ -113,7 +111,7 @@
 
 .services__item1::before {
   content: "";
-  background-image: url(.././img/bg1jpg.jpg);
+  background-image: url(".././img/bg1jpg.jpg");
   opacity: 0.2;
   top: 0;
   left: 0;
@@ -131,7 +129,7 @@
 
 .services__item2::before {
   content: "";
-  background-image: url(.././img/bg2.jpg);
+  background-image: url(".././img/bg2.jpg");
   opacity: 0.2;
   top: 0;
   left: 0;
@@ -149,7 +147,7 @@
 
 .services__item3::before {
   content: "";
-  background-image: url(.././img/bg3.jpg);
+  background-image: url(".././img/bg3.jpg");
   opacity: 0.2;
   top: 0;
   left: 0;
@@ -174,7 +172,7 @@
 }
 
 .services__item h3 {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   max-width: 28rem;
   font-size: 20px;
   line-height: 30px;
@@ -182,12 +180,12 @@
   margin: 0 auto;
   color: white;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     margin-left: 4rem;
     padding-top: 4rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     margin-left: 3.5rem;
     padding-top: 2rem;
   }

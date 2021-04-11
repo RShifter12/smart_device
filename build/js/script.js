@@ -6,6 +6,22 @@ var MIN_TITLE_LENGTH = 16;
 var nameInputModal = document.querySelector('#modal__name');
 var nameInput = document.querySelector('#name');
 var areaInput = document.querySelector('#comment');
+var acc = document.querySelectorAll('.accordion');
+
+var i;
+
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', function (event) {
+    event.currentTarget.classList.toggle('active');
+    var panel = event.currentTarget.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + '300px';
+    }
+  });
+}
 
 phoneInput.addEventListener('input', function () {
   var regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
@@ -16,21 +32,6 @@ phoneInput.addEventListener('input', function () {
     phoneInput.setCustomValidity('');
   }
 });
-
-var acc = document.querySelector('.accordion');
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener('click', function () {
-    this.classList.toggle('active');
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + '300px';
-    }
-  });
-}
 
 var modal = document.querySelector('.modal');
 

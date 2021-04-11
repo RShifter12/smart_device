@@ -6,14 +6,14 @@
   margin-top: 8rem;
   height: 44.5rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     max-width: 77rem;
     grid-template-columns: 27% 73%;
     margin-top: 4rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     height: 100%;
     max-width: 30rem;
@@ -24,20 +24,19 @@
 .about__image {
   margin-top: 4rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     width: 100%;
     height: 100%;
     margin-top: 1rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     display: none;
   }
 }
 
 .about__image img {
-
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     width: 251px;
     height: 361px;
   }
@@ -47,11 +46,11 @@
   color: $black;
   overflow: hidden;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-right: 2rem;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-right: 0;
   }
 }
@@ -61,12 +60,12 @@
   line-height: 51px;
   margin-bottom: 2.5rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     font-size: 32px;
     line-height: 45px;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 3rem;
@@ -77,21 +76,20 @@
 .about__text p {
   font-size: 16px;
   line-height: 22px;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", monospace;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-left: 1rem;
     margin-bottom: 2rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     margin-bottom: 3rem;
   }
 }
 
 .about__text span {
-
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     display: none;
   }
 }
@@ -99,14 +97,15 @@
 .about__text a {
   display: inline-block;
   margin-top: 2.5rem;
+  vertical-align: middle;
   color: $primary;
   border: 1px solid $primary;
   border-radius: 5px;
   padding: 1.2rem 4.7rem;
   text-transform: uppercase;
-  font-family: "Roboto Condendsed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.05em;

@@ -12,7 +12,7 @@
   padding-top: 6rem;
   height: 26.5rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     height: auto;
     grid-template-columns: 1fr 1fr;
     padding-top: 0;
@@ -20,14 +20,13 @@
     border-bottom: 1px solid #626962;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr min-content min-content;
   }
 }
 
 .footer__item--links a {
-
   &:hover,
   &:focus {
     color: $primary;
@@ -36,7 +35,7 @@
 }
 
 .footer__item--logo {
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     display: grid;
     grid-template-columns: 42% 33% 25%;
     grid-column: span 3;
@@ -48,7 +47,7 @@
     border-bottom: 1px solid #626962;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     grid-column: span 1;
     grid-template-columns: 1fr;
   }
@@ -64,7 +63,7 @@
   padding-left: 25rem;
   padding-right: 25rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     grid-template-columns: 73% 27%;
     align-items: center;
     padding-top: 1rem;
@@ -73,7 +72,7 @@
     border-top: 1px solid #626962;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     margin: 0 auto;
@@ -87,16 +86,17 @@
   grid-column-gap: 2rem;
   padding-top: 1rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-top: 2rem;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     max-width: 22rem;
     margin: 0 auto;
     padding-top: 5rem;
   }
 }
+
 .footer__item-intro a {
   grid-row: span 2;
 }
@@ -109,10 +109,11 @@
 .footer__item-intro p {
   margin-top: 0;
 }
+
 .footer__item b {
   font-size: 25px;
   line-height: 29px;
-  color: #203C42;
+  color: #203c42;
 }
 
 .footer__item-socials {
@@ -121,13 +122,13 @@
   margin-top: 4rem;
   grid-gap: 1.5rem;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     margin-top: 0;
     align-self: center;
     justify-self: end;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     margin-bottom: 3rem;
     justify-self: center;
   }
@@ -148,9 +149,9 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #1B2D37;
+  color: #1b2d37;
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     display: none;
   }
 }
@@ -158,7 +159,7 @@
 .footer__item p {
   font-size: 15px;
   line-height: 15px;
-  color: #1B2D37;
+  color: #1b2d37;
   opacity: 0.5;
 }
 
@@ -170,21 +171,19 @@
 }
 
 .footer__item {
-
   @media (max-width: $tablet-width) {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-.footer__item--links  {
+.footer__item--links {
   padding-left: 0;
 
   @media (max-width: $tablet-width) {
     column-count: 1;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-
   }
 
   @media (max-width: $mobile-width) {
@@ -202,16 +201,15 @@
 }
 
 .footer__item a {
-  color: #1B2D37;
+  color: #1b2d37;
   font-size: 15px;
   line-height: 25px;
-  font-family: "PT Mono";
-  color: #1B2D37;
+  font-family: "PT Mono", "Arial", monospace;
   opacity: 0.5;
 }
 
 .footer__item--office li {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -219,26 +217,24 @@
 }
 
 .footer__item--down p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  color: #1B2D37;
+  color: #1b2d37;
   text-transform: uppercase;
   opacity: 0.5;
 }
 
 .nonvis {
-
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
 
 .footer__item--office {
-
   @media (max-width: $tablet-width) {
     padding-left: 2.5rem;
   }
@@ -253,17 +249,15 @@
 }
 
 .footer__item--office p {
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", monospace;
   font-size: 15px;
   line-height: 25px;
-  color: #1B2D37;
+  color: #1b2d37;
   opacity: 0.5;
 }
 
-
 .text-tablet {
-
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     display: none;
   }
 }
@@ -271,19 +265,19 @@
 .tablet {
   display: none;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     display: grid;
     font-size: 13px;
     line-height: 24px;
-    font-family: "PT Mono";
+    font-family: "PT Mono", "Arial", monospace;
     align-self: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #1B2D37;
+    color: #1b2d37;
     opacity: 0.5;
   }
 
-  @media(max-width: $mobile-width) {
+  @media (max-width: $mobile-width) {
     margin: 0 auto;
     margin-top: 0.5rem;
     margin-bottom: 3.5rem;
@@ -291,9 +285,9 @@
 }
 
 .accordion {
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   display: none;
-  color: #1B2D37;
+  color: #1b2d37;
   cursor: pointer;
   padding-top: 1rem;
   padding-left: 1.5rem;
@@ -314,11 +308,10 @@
 
 .active,
 .accordion:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .panel {
-
   @media (max-width: $mobile-width) {
     margin-left: 2rem;
     background-color: white;
@@ -328,7 +321,7 @@
   }
 }
 
-.accordion:after {
+.accordion::after {
   content: "";
   background-image: url(".././img/plus.svg");
   width: 16px;
@@ -338,8 +331,7 @@
   margin-left: 4px;
 }
 
-
-.active:after {
+.active::after {
   content: "";
   background-image: url(".././img/minus.svg");
   width: 16px;
