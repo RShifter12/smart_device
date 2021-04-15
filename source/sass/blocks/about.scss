@@ -1,23 +1,27 @@
 .about {
   display: grid;
-  grid-template-columns: 17% 80%;
+  grid-template-columns: 16% 80%;
   max-width: 122rem;
   margin: 0 auto;
-  margin-top: 8rem;
-  height: 44.5rem;
+  margin-top: 7rem;
+  min-height: 44rem;
+  margin-bottom: 1rem;
 
   @media (max-width: $tablet-width) {
     max-width: 77rem;
     grid-template-columns: 27% 73%;
     margin-top: 4rem;
     margin-bottom: 0;
+
   }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
+    grid-template-rows: min-content;
     height: 100%;
-    max-width: 30rem;
-    margin-bottom: 7rem;
+    padding-right: 0;
+    padding-left: 1.5rem;
+    min-height: 56rem;
   }
 }
 
@@ -50,8 +54,8 @@
     padding-right: 2rem;
   }
 
-  @media (max-width: $tablet-width) {
-    padding-right: 0;
+  @media (max-width: $mobile-width) {
+    padding-right: 1rem;
   }
 }
 
@@ -59,17 +63,20 @@
   font-size: 36px;
   line-height: 51px;
   margin-bottom: 2.5rem;
+  margin-left: 1rem;
 
   @media (max-width: $tablet-width) {
     font-size: 32px;
     line-height: 45px;
+    margin-top: 1rem;
+    margin-left: 0;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     font-size: 28px;
     line-height: 39px;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 }
 
@@ -84,7 +91,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
+    padding-left: 0;
   }
 }
 
@@ -104,6 +112,7 @@
   padding: 1.2rem 4.7rem;
   text-transform: uppercase;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  margin-left: 1rem;
 
   @media (max-width: $mobile-width) {
     font-size: 14px;

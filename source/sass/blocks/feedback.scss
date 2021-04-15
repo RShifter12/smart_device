@@ -1,10 +1,14 @@
 .feedback {
   background-color: $primary;
-  height: 66rem;
+  min-height: 67rem;
   position: relative;
 
+  @media (max-width: $tablet-width) {
+      min-height: 66rem;
+    }
+
   @media (max-width: $mobile-width) {
-    height: 63rem;
+    min-height: 63rem;
   }
 
   &::after {
@@ -27,7 +31,7 @@
 
 .feedback__wrapper {
   display: grid;
-  grid-template-columns: minmax(300px, 685px) minmax(300px, 630px);
+  grid-template-columns: minmax(300px, 685px) minmax(300px, 578px);
   grid-template-rows: 1fr;
   max-width: 157rem;
   margin: 0 auto;
@@ -46,10 +50,12 @@
 }
 
 .form {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content 1fr
+    min-content;
   z-index: 1;
-  column-gap: 4rem;
+  column-gap: 3rem;
   position: relative;
   margin-top: 5rem;
 
@@ -73,7 +79,7 @@
 .feedback__text {
   color: white;
   margin-top: 6rem;
-  max-width: 58rem;
+  max-width: 60rem;
 
   @media (max-width: $tablet-width) {
     margin-top: 5rem;
@@ -110,18 +116,18 @@
 
 .form input:not(input[type="checkbox"]) {
   height: 5rem;
-  width: 27rem;
+  width: 100%;
   background-color: #02b4ff;
   border: none;
   color: white;
   font-family: inherit;
   padding-left: 2rem;
-  padding-top: 1rem;
   font-size: 16px;
 
   @media (max-width: $mobile-width) {
     width: 100%;
     margin-bottom: 3rem;
+    grid-column: span 2;
   }
 
   &:hover,
@@ -138,7 +144,6 @@
   }
 }
 
-
 .form textarea {
   display: inline-block;
   vertical-align: middle;
@@ -152,9 +157,16 @@
   font-family: inherit;
   font-size: 16px;
   line-height: 22px;
-  margin-top: 5rem;
+  margin-top: 4rem;
   padding-top: 1rem;
   margin-bottom: 5rem;
+  grid-column: span 2;
+  border-radius: 0;
+  outline: none;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 5rem;
+  }
 
   @media (max-width: $mobile-width) {
     margin-top: 1rem;
@@ -193,6 +205,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    grid-column: span 2;
   }
 
   &:hover,
@@ -242,9 +255,6 @@
   line-height: 16px;
   max-width: 25rem;
   margin-top: -1rem;
-  position: absolute;
-  bottom: 1rem;
-  right: -2.5rem;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
@@ -256,5 +266,21 @@
     max-width: 260px;
     bottom: -7rem;
     right: 0;
+  }
+}
+
+.form label:last-child {
+  max-width: 20rem;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    grid-column: span 2;
   }
 }

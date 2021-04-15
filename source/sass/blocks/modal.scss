@@ -40,6 +40,13 @@
   max-width: 90%;
 }
 
+.modal__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-gap: 3.5rem;
+}
+
 .modal label {
   font-size: 14px;
   line-height: 16px;
@@ -54,21 +61,30 @@
   background: none;
   border: none;
   top: 2rem;
+  cursor: pointer;
 }
 
 .modal__form input:not(input[type="checkbox"]) {
-  margin-bottom: 3rem;
+  height: 5rem;
   width: 100%;
+  background-color: #02b4ff;
+  border: none;
+  color: white;
+  font-family: inherit;
+  padding-left: 2rem;
+  font-size: 16px;
+  grid-column: span 2;
 }
 
 .modal__form textarea {
   margin-top: 0;
   height: 10rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 }
 
 .modal__form button {
   width: 100%;
+  grid-column: span 2;
 }
 
 .modal__form input[type="checkbox"]:checked + span {
@@ -97,5 +113,11 @@
 .modal__form label {
   left: 5rem;
   top: 39rem;
-  max-width: 36rem;
+  width: 100%;
+}
+
+.modal__form label:last-child {
+  max-width: 32rem;
+  margin-top: -0.5rem;
+  margin-left: 5rem;
 }

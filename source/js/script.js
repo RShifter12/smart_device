@@ -1,15 +1,19 @@
 'use strict';
 var phoneInput = document.querySelector('#tel');
+var phoneInputModal = document.querySelector('#modal__tel');
 var navButton = document.querySelector('.nav__content-button');
-var phoneNumber = document.querySelector('#tel').value;
-var MIN_TITLE_LENGTH = 16;
 var nameInputModal = document.querySelector('#modal__name');
 var nameInput = document.querySelector('#name');
 var areaInput = document.querySelector('#comment');
 var acc = document.querySelectorAll('.accordion');
-
+var modal = document.querySelector('.modal');
 var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[1].classList.toggle('active');
+  var panel1 = document.querySelectorAll('.panel');
+  panel1[1].style.maxHeight = panel1[1].style.maxHeight + '300px';
+}
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener('click', function (event) {
@@ -18,22 +22,20 @@ for (i = 0; i < acc.length; i++) {
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + '300px';
+      panel.style.maxHeight = panel.style.maxHeight + '300px';
+      collapseOthers(event.currentTarget);
     }
   });
 }
 
-phoneInput.addEventListener('input', function () {
-  var regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-
-  if (!regex.test(phoneNumber)) {
-    phoneInput.setCustomValidity('Неправильный формат');
-  } else {
-    phoneInput.setCustomValidity('');
+function collapseOthers(clickedAccor) {
+  var accs = document.getElementsByClassName('accordion');
+  for (i = 0; i < accs.length; i++) {
+    if (accs[i] !== clickedAccor) {
+      accs[i].nextElementSibling.style.maxHeight = null;
+    }
   }
-});
-
-var modal = document.querySelector('.modal');
+}
 
 var onPopupEscPress = function (evt) {
   if (evt.keyCode === 27) {
@@ -55,6 +57,9 @@ var closePopup = function () {
 
 navButton.addEventListener('click', function () {
   openPopup();
+  var freezeScroll = document.querySelector('html');
+  freezeScroll.style.overflow = 'hidden';
+
 
 });
 
@@ -67,6 +72,8 @@ var modalClose = document.querySelector('.modal__close');
 
 modalClose.addEventListener('click', function () {
   closePopup();
+  var freezeScroll = document.querySelector('html');
+  freezeScroll.style.overflow = 'visible';
 });
 
 modalClose.addEventListener('keydown', function (evt) {
@@ -75,52 +82,73 @@ modalClose.addEventListener('keydown', function (evt) {
   }
 });
 
+phoneInput.addEventListener('focus', function () {
+  phoneInput.value = '+7';
+
+});
+
+phoneInputModal.addEventListener('focus', function () {
+  phoneInputModal.value = '+7';
+
+});
+
 phoneInput.addEventListener('input', function () {
-  var valueLength = phoneInput.value.length;
+  var phoneNumber = document.querySelector('#tel').value;
   var regex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-  if (valueLength < MIN_TITLE_LENGTH) {
-    phoneInput.setCustomValidity('Ещё ' + (MIN_TITLE_LENGTH - valueLength) + ' симв.');
-  } else if (!regex.test(phoneNumber)) {
+
+  if (!regex.test(phoneNumber)) {
     phoneInput.setCustomValidity('Неправильный формат');
   } else {
     phoneInput.setCustomValidity('');
   }
-  phoneInput.reportValidity();
 });
 
-phoneInput.onclick = function () {
-  phoneInput.value = '+7';
-};
+phoneInputModal.addEventListener('input', function () {
+  var phoneNumber = document.querySelector('#modal__tel').value;
+  var regex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 
-var old = 0;
+  if (!regex.test(phoneNumber)) {
+    phoneInputModal.setCustomValidity('Неправильный формат');
+  } else {
+    phoneInputModal.setCustomValidity('');
+  }
+});
 
-phoneInput.onkeydown = function () {
+phoneInput.addEventListener('keydown', function () {
+  var old = 0;
   var curLen = phoneInput.value.length;
-
   if (curLen < old) {
     old--;
     return;
-  }
-
-  if (curLen === 2) {
+  } else if (curLen === 2) {
     phoneInput.value = phoneInput.value + '(';
-  }
-
-  if (curLen === 6) {
+  } else if (curLen === 6) {
     phoneInput.value = phoneInput.value + ')';
-  }
-
-  if (curLen === 10) {
+  } else if (curLen === 10) {
+    phoneInput.value = phoneInput.value + '-';
+  } else if (curLen === 13) {
     phoneInput.value = phoneInput.value + '-';
   }
-
-  if (curLen === 13) {
-    phoneInput.value = phoneInput.value + '-';
-  }
-
-
   old++;
-};
+});
+
+phoneInputModal.addEventListener('keydown', function () {
+  var old = 0;
+  var curLen = phoneInputModal.value.length;
+  if (curLen < old) {
+    old--;
+    return;
+  } else if (curLen === 2) {
+    phoneInputModal.value = phoneInputModal.value + '(';
+  } else if (curLen === 6) {
+    phoneInputModal.value = phoneInputModal.value + ')';
+  } else if (curLen === 10) {
+    phoneInputModal.value = phoneInputModal.value + '-';
+  } else if (curLen === 13) {
+    phoneInputModal.value = phoneInputModal.value + '-';
+  }
+  old++;
+});
 
 nameInput.value = localStorage.getItem('name');
 nameInput.oninput = function () {

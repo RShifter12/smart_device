@@ -1,40 +1,38 @@
 .nav {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 45% 55%;
-  max-width: 141rem;
+  grid-template-columns: 0.8fr 1fr;
+  max-width: 143rem;
   padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @media (max-width: $tablet-width) {
-    grid-template-columns: 80% 20%;
+    max-width: 72rem;
     padding-top: 2.5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 2.5rem;
-    grid-template-columns: 64% 36%;
+    grid-template-columns: 70% 30%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 }
 
 .nav__content {
   display: grid;
-
-  @media (max-width: $mobile-width) {
-    margin-left: 1.5rem;
-  }
 }
 
 .nav__content--left {
   grid-template-columns: min-content 1fr;
   grid-column-gap: 1.5rem;
-
-  @media (max-width: $tablet-width) {
-    margin-left: 2rem;
-  }
 }
 
 .nav__content--left a {
-  grid-row: span 2;
+  grid-row: span 5;
   margin-top: -0.5rem;
 }
 
@@ -46,10 +44,18 @@
   }
 }
 
+.nav__content-mail,
+.nav__content-phone {
+  position: relative;
+
+}
+
 .nav__content-mail a,
 .nav__content-phone a {
   color: white;
   margin-left: 1rem;
+  margin-top: 1rem;
+  display: block;
 
   &:hover,
   &:focus {
@@ -63,11 +69,11 @@
 
 .nav__content-mail p,
 .nav__content-phone p {
-
   font-family: "PT Mono", "Arial", monospace;
   display: inline-block;
   vertical-align: middle;
   margin-left: 1.2rem;
+  margin-top: -1rem;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -76,16 +82,53 @@
 
 .nav__content--right {
   display: grid;
-  grid-template-columns: 1fr 1fr min-content;
+  grid-template-columns: minmax(145px, 1fr) minmax(225px, 1fr) min-content;
   align-items: center;
   justify-items: end;
   grid-gap: 5rem;
-  margin-top: -1rem;
+  margin-top: -2rem;
 
   @media (max-width: $tablet-width) {
-    grid-gap: 2rem;
+    grid-template-columns: 1fr min-content;
+    grid-gap: 2.5rem;
   }
 }
+
+.nav__content-button--nojs {
+  display: none;
+}
+
+.nav__content-link--nojs {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 20rem;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+  }
+
+  &:active {
+    background-color: darken($primary, 15%);
+  }
+
+}
+
+.nav__content-link {
+  display: none;
+}
+
 
 .nav__content--left svg {
   width: 52px;
@@ -98,12 +141,18 @@
 }
 
 .nav__content--right svg {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
+
+  @media (max-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 
 .nav__content--right button {
+  display: block;
   height: 45px;
   width: 18rem;
   border: 1px solid white;
@@ -126,7 +175,6 @@
     background-color: darken($primary, 15%);
   }
 }
-
 
 .nav__content b {
   font-weight: bold;

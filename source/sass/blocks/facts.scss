@@ -1,22 +1,23 @@
 .facts {
-  max-width: 116rem;
+  max-width: 119rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(300px, min-content) minmax(300px, min-content);
   margin-top: 5.5rem;
   grid-gap: 3.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 
   @media (max-width: $tablet-width) {
-    max-width: 72rem;
-    grid-template-rows: 1fr min-content;
-    grid-row-gap: 5rem;
+    max-width: 74rem;
+    grid-template-rows: minmax(305px, 1fr) minmax(235px, min-content);
+    grid-row-gap: 3rem;
   }
 
   @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 31rem 31rem 23rem 25rem;
-    max-width: 30rem;
     margin-top: 0;
     grid-gap: 2rem;
   }
@@ -32,21 +33,20 @@
   @media (max-width: $tablet-width) {
     padding-top: 2rem;
     padding-left: 2.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 2rem;
+    padding-right: 1.7rem;
+    padding-bottom: 0;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 2rem;
     padding-left: 2.5rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     padding-bottom: 0;
   }
 
   &:hover,
   &:focus {
     background-color: $primary;
-    cursor: pointer;
   }
 }
 
@@ -94,7 +94,7 @@
     margin-top: 0.7rem;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $mobile-width) {
     margin-top: 1.5rem;
   }
 }
