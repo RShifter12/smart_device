@@ -2,10 +2,6 @@
   display: none;
 }
 
-.modal__form {
-  margin-top: 2.5rem;
-}
-
 .modal {
   background-color: $primary;
   position: absolute;
@@ -45,6 +41,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
   grid-gap: 3.5rem;
+  margin-top: 2.5rem;
 }
 
 .modal label {
