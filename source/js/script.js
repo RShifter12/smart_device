@@ -1,7 +1,7 @@
 'use strict';
 var phoneInput = document.querySelector('#tel');
 var phoneInputModal = document.querySelector('#modal__tel');
-var navButton = document.querySelector('.nav__content-button');
+var navButton = document.querySelector('.nav__content-link');
 var nameInputModal = document.querySelector('#modal__name');
 var nameInput = document.querySelector('#name');
 var areaInput = document.querySelector('#comment');
@@ -55,7 +55,8 @@ var closePopup = function () {
 
 };
 
-navButton.addEventListener('click', function () {
+navButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
   openPopup();
   var freezeScroll = document.querySelector('html');
   freezeScroll.style.overflow = 'hidden';
@@ -157,9 +158,9 @@ phoneInputModal.addEventListener('keydown', function () {
   old++;
 });
 
-//phoneInput.addEventListener('keyup', function () {
-//  this.value = this.value.replace(/[\d]/g, '');
-//});
+phoneInput.addEventListener('keyup', function (event) {
+  event.currentTarget.value = event.currentTarget.value.replace(/[A-Za-zА-Яа-яЁё]/, '');
+});
 
 nameInput.value = localStorage.getItem('name');
 nameInput.oninput = function () {
