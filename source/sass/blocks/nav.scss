@@ -53,7 +53,7 @@
 .nav__content-phone a {
   color: white;
   margin-left: 1rem;
-  margin-top: 1rem;
+  margin-top: 0;
   display: block;
 
   &:hover,
@@ -93,13 +93,11 @@
   }
 }
 
-.nav__content-button--nojs {
-  display: none;
-}
+
 
 .nav__content-link--nojs {
   display: block;
-  padding: 1.5rem;
+  padding: 1.4rem;
   border: 1px solid white;
   background: transparent;
   border-radius: 5px;
@@ -150,7 +148,7 @@
 
 
 .nav__content--right button {
-  display: block;
+
   height: 45px;
   width: 18rem;
   border: 1px solid white;
@@ -173,6 +171,16 @@
     background-color: darken($primary, 15%);
   }
 }
+
+.nav__content-button--nojs {
+  display: none;
+}
+
+.nav__content-button {
+  display: block;
+}
+
+
 
 .nav__content b {
   font-weight: bold;

@@ -103,6 +103,8 @@ phoneInput.addEventListener('input', function () {
   }
 });
 
+var old = 0;
+
 phoneInputModal.addEventListener('input', function () {
   var phoneNumber = document.querySelector('#modal__tel').value;
   var regex = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
@@ -115,7 +117,7 @@ phoneInputModal.addEventListener('input', function () {
 });
 
 phoneInput.addEventListener('keydown', function () {
-  var old = 0;
+
   var curLen = phoneInput.value.length;
   if (curLen < old) {
     old--;
@@ -132,23 +134,32 @@ phoneInput.addEventListener('keydown', function () {
   old++;
 });
 
+
 phoneInputModal.addEventListener('keydown', function () {
-  var old = 0;
+
   var curLen = phoneInputModal.value.length;
   if (curLen < old) {
     old--;
     return;
-  } else if (curLen === 2) {
+  }
+  if (curLen === 2) {
     phoneInputModal.value = phoneInputModal.value + '(';
-  } else if (curLen === 6) {
+  }
+  if (curLen === 6) {
     phoneInputModal.value = phoneInputModal.value + ')';
-  } else if (curLen === 10) {
+  }
+  if (curLen === 10) {
     phoneInputModal.value = phoneInputModal.value + '-';
-  } else if (curLen === 13) {
+  }
+  if (curLen === 13) {
     phoneInputModal.value = phoneInputModal.value + '-';
   }
   old++;
 });
+
+//phoneInput.addEventListener('keyup', function () {
+//  this.value = this.value.replace(/[\d]/g, '');
+//});
 
 nameInput.value = localStorage.getItem('name');
 nameInput.oninput = function () {

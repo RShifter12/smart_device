@@ -33,15 +33,19 @@
   display: grid;
   grid-template-columns: minmax(300px, 685px) minmax(300px, 578px);
   grid-template-rows: 1fr;
-  max-width: 157rem;
+  max-width: 159rem;
   margin: 0 auto;
   grid-gap: 11rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 0;
     max-width: 59rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -202,10 +206,13 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
+  grid-column: 1;
+  grid-row: 3;
 
   @media (max-width: $mobile-width) {
     width: 100%;
     grid-column: span 2;
+    grid-row: 4;
   }
 
   &:hover,
@@ -269,10 +276,12 @@
   }
 }
 
-.form label:last-child {
+.form label:nth-child(7n) {
   max-width: 20rem;
   margin-top: 0.5rem;
   margin-left: 4rem;
+  grid-column: 2;
+
 
   @media (max-width: $tablet-width) {
     margin-top: 1rem;

@@ -1,6 +1,4 @@
 .footer {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
   position: relative;
 
   &::after {
@@ -11,6 +9,7 @@
     left: 0;
     top: 26rem;
     background-color: #626962;
+    opacity: 0.2;
 
     @media (max-width: $tablet-width) {
       top: 10rem;
@@ -88,7 +87,7 @@
     padding-top: 1rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    border-top: 1px solid #626962;
+    border-top: 1px solid rgba(98, 105, 98, 0.2);
   }
 
   @media (max-width: $mobile-width) {
@@ -206,7 +205,7 @@
     column-count: 1;
     padding: 0;
     margin-bottom: 2rem;
-    border-bottom: 1px solid #626962;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 }
 
@@ -258,7 +257,7 @@
 
   @media (max-width: $mobile-width) {
     padding: 0;
-    border-bottom: 1px solid #626962;
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 }
 
